@@ -1,0 +1,29 @@
+
+//dos命令
+
+1、查看端口使用情况
+netstat -a
+
+2、获取网站的ip地址
+ping www.baidu.com
+
+2、查看本地ip地址
+ipconfig
+
+3、查看详细本地ip地址
+ipconfig/all
+
+4、进入某个目录
+cd 路径名
+
+5、返回上一层目录
+cd ../
+
+6、返回根目录
+cd /
+
+7、查看目录
+dir
+
+8、清空dos窗口
+cls
