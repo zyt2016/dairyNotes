@@ -1,7 +1,6 @@
 
 1、查看字符编码信息
 show variables like 'character_set_%';
-
 结果：
 mysql> show variables like 'character_set_%';
 +--------------------------+-------------------------------------------------+
@@ -20,7 +19,7 @@ mysql> show variables like 'character_set_%';
 
 2、设置字符编码
 set names gbk;
-
+结果：
 mysql> show variables like 'character_set_%';
 +--------------------------+-------------------------------------------------+
 | Variable_name            | Value                                           |
@@ -38,7 +37,7 @@ mysql> show variables like 'character_set_%';
 
 3、显示创建数据库的信息（包括了该数据库的字符编码）
 show create databases 数据库名;
-
+结果：
 mysql> show create database one;
 +----------+--------------------------------------------------------------+
 | Database | Create Database                                              |
@@ -49,6 +48,28 @@ mysql> show create database one;
 
 4、显示创建表的信息
 show create table 表名;
+结果：
+mysql> show create table user1;
++-------+-----------------------------------------------------------------------
+--------------------------------------------------------------------------------
+-----------------------------------------------------+
+| Table | Create Table
+
+                                                     |
++-------+-----------------------------------------------------------------------
+--------------------------------------------------------------------------------
+-----------------------------------------------------+
+| user1 | CREATE TABLE `user1` (
+  `id` int(11) NOT NULL,
+  `name` varchar(10) NOT NULL,
+  `password` varchar(10) NOT NULL,
+  `sex` char(2) DEFAULT '女',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
++-------+-----------------------------------------------------------------------
+--------------------------------------------------------------------------------
+-----------------------------------------------------+
+1 row in set (0.01 sec)
 
 5、更改数据库的编码
 alter database 数据库名 charset=utf8;
