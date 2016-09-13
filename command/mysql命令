@@ -1,5 +1,5 @@
 
-1、查看字符编码信息
+1、查看客户端，数据库连接，服务器端的字符编码信息
 show variables like 'character_set_%';
 结果：
 mysql> show variables like 'character_set_%';
@@ -17,7 +17,7 @@ mysql> show variables like 'character_set_%';
 +--------------------------+-------------------------------------------------+
 8 rows in set (0.00 sec)
 
-2、设置字符编码
+2、设置客户端，数据库连接，服务器端的字符编码
 set names gbk;
 结果：
 mysql> show variables like 'character_set_%';
@@ -47,7 +47,7 @@ mysql> show create database one;
 1 row in set (0.00 sec)
 
 4、显示创建表的信息
-show create table 表名;
+show create table 表名;（显示字段的创建的详细信息）
 结果：
 mysql> show create table user1;
 +-------+-----------------------------------------------------------------------
