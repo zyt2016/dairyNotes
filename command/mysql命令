@@ -1,5 +1,5 @@
 
-1、显示字符编码信息
+1、查看字符编码信息
 show variables like 'character_set_%';
 
 结果：
@@ -36,11 +36,21 @@ mysql> show variables like 'character_set_%';
 +--------------------------+-------------------------------------------------+
 8 rows in set (0.00 sec)
 
-3、显示创建数据库的信息
+3、显示创建数据库的信息（包括了该数据库的字符编码）
 show create databases 数据库名;
+
+mysql> show create database one;
++----------+--------------------------------------------------------------+
+| Database | Create Database                                              |
++----------+--------------------------------------------------------------+
+| one      | CREATE DATABASE `one` /*!40100 DEFAULT CHARACTER SET utf8 */ |
++----------+--------------------------------------------------------------+
+1 row in set (0.00 sec)
 
 4、显示创建表的信息
 show create table 表名;
 
 5、更改数据库的编码
+alter database 数据库名 charset=utf8;
+
 
