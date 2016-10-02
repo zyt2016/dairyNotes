@@ -1,0 +1,7 @@
+git使用常见错误：
+
+1、$ git add index.html
+fatal: Unable to create 'E:/selfOS/.git/index.lock': File exists.
+
+解决办法：
+$ rm -f .git/index.lock
